@@ -13,10 +13,8 @@ CREATE TABLE burgers
     burger_name VARCHAR
     (30) NOT NULL ,
     devoured BOOLEAN DEFAULT false NOT NULL,
-    createdAt DATETIME DEFAULT now
-    () NOT NULL,
-    updatedAt DATETIME DEFAULT now
-    () NOT NULL,
+    createdAt DATETIME DEFAULT now() NOT NULL,
+    updatedAt DATETIME DEFAULT now() NOT NULL,
     PRIMARY KEY
     (id)
 )
