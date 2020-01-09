@@ -3,8 +3,8 @@
 const connection = require("./connection.js");
 // In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. 
 let orm = {
-    selectAll: function(tableInput, cb){
-        connection.query(`SELECT * FROM ${tableInput};`, function(err, result){
+    selectAll: function (tableInput, cb) {
+        connection.query(`SELECT * FROM ${tableInput};`, function (err, result) {
             if (err) throw err;
             cb(result);
         })
@@ -30,4 +30,4 @@ let orm = {
 
 // Export the ORM object in `module.exports`
 
-modules.export=orm;
+modules.export = orm
