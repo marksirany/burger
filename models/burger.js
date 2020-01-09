@@ -10,9 +10,5 @@ const orm = require("../config/orm.js")
       }
    }
    // * Export at the end of the`burger.js` file.
-<<<<<<< HEAD
-module.exports = burgers;
-=======
 
    
->>>>>>> parent of 03bb686... added orm funtctions and export functions
