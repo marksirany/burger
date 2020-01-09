@@ -8,17 +8,11 @@ const orm = require("../config/orm.js")
                cb(result)
          })
       }
-      insertOne: function (cb) {
-         orm.insertOne("burgers", function (result) {
-            cb(result)
-         })
-      }
-
-      updateOne: function (tableInput, cb) {
-         orm.updateOne("burgers", function (result) {
-            cb(result)
-         })
-      }
    }
    // * Export at the end of the`burger.js` file.
+<<<<<<< HEAD
 module.exports = burgers;
+=======
+
+   
+>>>>>>> parent of 03bb686... added orm funtctions and export functions
