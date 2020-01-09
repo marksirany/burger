@@ -2,16 +2,16 @@ USE burgers_db;
 
 -- https://www.mysqltutorial.org/mysql-datetime/ --
 INSERT INTO burgers
-    (burger_name, devoured)
+    (burger_name, devoured, createdAt, updatedAt)
 VALUES
-    ("Taco Burger", false);
+    ("Taco Burger", false, now(), now());
 
 INSERT INTO burgers
-    (burger_name, devoured)
+    (burger_name, devoured, createdAt, updatedAt)
 VALUES
-    ("Veggie", false);
+    ("Veggie", false, now(), now());
 
 INSERT INTO burgers
-    (burger_name, devoured)
+    (burger_name, devoured, createdAt, updatedAt)
 VALUES
-    ("Turkey Burger", false);
+    ("Turkey Burger", true, now(), now());
