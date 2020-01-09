@@ -15,11 +15,11 @@ const connection = mysql.createConnection({
   database: "burgers_db"
 })
 
-connection.connect(function(error){
-    if (err) throw err;
-    console.log(connection.threadId);
+connection.connect(function (error) {
+  if (err) throw err;
+  console.log(connection.threadId);
 
 })
 // export the connection //
 
-module.exports=connection;
+module.exports = connection;
