@@ -30,4 +30,4 @@ let orm = {
 
 // Export the ORM object in `module.exports`
 
-modules.export=orm;
+module.exports=orm;

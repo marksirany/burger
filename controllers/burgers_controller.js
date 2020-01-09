@@ -1,7 +1,7 @@
 //Inside the`burgers_controller.js` file, import the following: Express and `burger.js`
 
 const express = require("express");
-const burger = require("../models/burger")
+const burger = require("../models/burger.js")
 
 //Create the`router` for the app, and export the`router` at the end of your file.
 
@@ -26,3 +26,5 @@ router.put("/burgers/:id", function (req, res) {
         res.render("")
     })
 })
+
+module.exports=burgers.controller

@@ -8,7 +8,17 @@ const orm = require("../config/orm.js")
                cb(result)
          })
       }
+      insertOne: function (cb) {
+         orm.insertOne("burgers", function (result) {
+            cb(result)
+         })
+      }
+
+      updateOne: function (tableInput, cb) {
+         orm.updateOne("burgers", function (result) {
+            cb(result)
+         })
+      }
    }
    // * Export at the end of the`burger.js` file.
-
-   
+module.exports=burger;
