@@ -1,25 +1,34 @@
-// setup the code to connect Node to MySQL //
 
 const mysql = require("mysql")
+
 const connection = mysql.createConnection({
-  host: "localhost",
+  host: "l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
   // Your port; if not 3306
-  port: 8889,
+  port: 3306,
 
   // Your username
-  user: "root",
+  user: "smeiyqosugphq17k",
 
   // Your password
-  password: "root",
-  database: "burgers_db"
-})
+  password: "ehn9mnrxg9yu8en0",
+  database: "edkh7j5t4jevscj8"
 
-connection.connect(function (error) {
+  // to use locally see below
+
+  // host: "127.0.0.1", 
+  // port: 3306, 
+  // user:"root",
+  // password: "root",
+  // database: "burgers_db"
+
+
+
+});
+
+connection.connect(function (err) {
   if (err) throw err;
-  console.log(connection.threadId);
+  console.log("connected as id " + connection.threadId);
+});
 
-})
-// export the connection //
-
-module.exports = connection;
+module.exports = connection
