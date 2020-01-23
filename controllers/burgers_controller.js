@@ -1,17 +1,18 @@
 //Inside the`burgers_controller.js` file, import the following: Express and `burger.js`
 
 const express = require("express");
-const burger = require("../models/burger")
+const burger = require("../models/burger.js")
+var router = express.Router(); 
 
 //Create the`router` for the app, and export the`router` at the end of your file.
 
 router.get("/", function(req,res){
-res.redirect()
+    res.redirect("/burgers"); 
 })
 
 router.get("/burgers", function (req, res) {
     burger.selectAll(function(burgerData){
-        res.render("")
+        res.render("index", { burger: burgerData})
     })
 })
 
@@ -26,3 +27,6 @@ router.put("/burgers/:id", function (req, res) {
         res.render("")
     })
 })
+
+
+module.exports = router;

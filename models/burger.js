@@ -2,20 +2,20 @@
 const orm = require("../config/orm.js")
 // * Also inside`burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
 
-let burgers = {
+let burger = {
    selectAll: function (cb) {
-      orm.selectAll("burger", function (result) {
+      orm.selectAll("burgers", function (result) {
          cb(result)
       })
-   }
+   },
 
-       insertOne: function (cb) {
+   insertOne: function (cb) {
       orm.insertOne("burgers", function (result) {
          cb(result)
       })
-   }
+   },
 
-       updateOne: function (cb) {
+   updateOne: function (cb) {
       orm.updateOne("burgers", function (result) {
          cb(result)
       })

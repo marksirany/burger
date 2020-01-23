@@ -16,5 +16,5 @@ CREATE TABLE burgers
     createdAt DATETIME DEFAULT now() NOT NULL,
     updatedAt DATETIME DEFAULT now() NOT NULL,
     PRIMARY KEY
-    (id)
+    (id);
 )

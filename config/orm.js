@@ -8,7 +8,7 @@ const orm = {
             if (err) throw err;
             cb(result);
         })
-    }
+    },
     
 
     insertOne: function (tableInput, cb) {
@@ -16,7 +16,7 @@ const orm = {
             if (err) throw err;
             cb(result);
         })
-    }
+    },
 
     updateOne: function (tableInput, cb) {
         connection.query(`SELECT * FROM ${tableInput};`, function (err, result) {

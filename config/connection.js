@@ -2,7 +2,7 @@
 
 const mysql = require("mysql")
 const connection = mysql.createConnection({
-  host: "localhost",
+  host: "127.0.0.1",
 
   // Your port; if not 3306
   port: 8889,
@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
   database: "burgers_db"
 })
 
-connection.connect(function (error) {
+connection.connect(function (err) {
   if (err) throw err;
   console.log(connection.threadId);
 
