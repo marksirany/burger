@@ -1,6 +1,6 @@
 USE burgers_db;
 
--- https://www.mysqltutorial.org/mysql-datetime/ --
+
 INSERT INTO burgers
     (burger_name, devoured, createdAt, updatedAt)
 VALUES
