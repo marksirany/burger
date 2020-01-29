@@ -1,25 +1,21 @@
 // setup the code to connect Node to MySQL //
 
 const mysql = require("mysql")
-const connection = mysql.createConnection({
-  host: "127.0.0.1",
+let connection;
 
-  // Your port; if not 3306
-  port: 8889,
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL)
+} else {
+  connection = mysql.createConnection({
+    host: "127.0.0.1",
+    user: "root", 
+    password: "root",
+    database: "burgers_db",
+    port: '8889'
+  });
+};
 
-  // Your username
-  user: "root",
-
-  // Your password
-  password: "root",
-  database: "burgers_db"
-})
-
-connection.connect(function (err) {
-  if (err) throw err;
-  console.log(connection.threadId);
-
-})
+connection.connect();
 // export the connection //
 
 module.exports = connection;
